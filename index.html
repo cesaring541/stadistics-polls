@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Estadisticas</title>
+	<link rel="stylesheet" type="text/css" href="furtive/css/furtive.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<!--<link rel="stylesheet" type="text/css" href="flexboxgrid/css/index.css">-->
+	<link rel="stylesheet" href="foundation-icons/foundation-icons.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script type="text/javascript" src="js/jquery-2.1.4.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+
+</head>
+<header>
+	<img  class="image" src="img/Bienestar.png">
+	<h2 class="title">Ficha Socio demográfica del Estudiante  </h2>
+</header>
+<body>
+	
+	<nav class="flexy-nav">
+		<button id="flexy-nav__toggle" class="flexy-nav__toggle fi-list"> Menu</button>
+		<ul id="flexy-nav__items" class="flexy-nav__items">
+			<li class="flexy-nav__item"><a href="#" class="flexy-nav__link one-link">Inicio</a></li>
+			<li class="flexy-nav__item"><a href="#" class="flexy-nav__link two-link">Preguntas</a></li>
+			<li class="flexy-nav__item"><a href="#" class="flexy-nav__link three-link">Contacto</a></li>
+		</ul>
+	</nav>
+	<!-- section information-->
+	<article class="reading measure p2">
+		<article>
+			<p>La Unidad de Política Social de la Universidad se encuentra realizando un estudio orientado a conocer los aspectos que inciden en la deserción universitaria, a fin de diseñar estrategias de intervención dirigidas a disminuir dichos riesgos y a favorecer mayores procesos de adaptación a la población universitaria. Para ello, ha diseñado la siguiente encuesta que  busca conocer información sobre usted y su familia y sobre temas relacionados con su vida académica y relacional.</p>
+
+			<p>La encuesta es totalmente ANÓNIMA; es decir, no se le pide proporcionar ningún dato de identificación. La información que usted registre no tendrá ninguna consecuencia en su desempeño académico ni en su vida personal; por tal razón, le solicitamos responder de forma abierta y sincera, de tal manera que podamos tener una información ajustada a la realidad y a las experiencias vividas por las personas que respondan la encuesta. </p>
+
+			<p>Diligencie todas las preguntas del instrumento. El sistema lo guiará indicándole cuando alguna pregunta ha quedado en blanco. Al finalizar el ejercicio, le solicitamos dar click en el botón ENVIAR.</p>
+
+			<p>
+				He entendido la información que se expone en este consentimiento y me han respondido las dudas e inquietudes surgidas. Autorización Estoy de acuerdo o acepto participar en el presente estudio.
+			</p>			
+		</article>
+	</article>
+	<!-- end section information-->
+	<!-- section question -->
+	<section class="question" style="display:none;">
+		<ul class="question-modules list--unstyled">
+			<li class="bg--orange question-item__module"><h6>MODULO 1. DATOS DEMOGRÀFICOS</h6>
+				<a class="question-item__link date_demografics"href="#"><img class="question-item__image" src="img/flat/pencil.png">
+				</a>
+			</li>
+			<li class="bg--orange question-item__module"><h6>MODULO 2. DATOS SOCIOECONÒMICOS</h6>
+				<a class="question-item__link"href="#"><img  style="display:none;" class="question-item__image" src="img/flat/pencil.png">
+			</li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</section>	
+	<!-- end-section question module -->	
+	<section class="question-module">
+		<section class="question-module__demographics measure p2" style="display:none;">
+			<h3>MODULO 1. DATOS DEMOGRÀFICOS</h3>
+			<section class="question-module__demographicssection1" style="display:none;">
+				
+					<label for="bio">Seleccione el departamento de residencia:</label><br>
+					<select class="departament"></select>
+					<div style="display:none;" class="cities">
+						<label for="bio">Seleccione la ciudad de residencia:</label><br>
+						<select class="city"></select>
+					</div><br>
+					<label for="bio">Seccional donde estudia:</label><br>
+					<select name="" id="headquarters">
+					</select><br>
+					<div class="career" style="display:none;">
+					<label for="bio">Carrera que estudia:</label><br>
+					<select name="" id="career-list">
+					</select>
+					</div>
+					<br>
+					<input type="submit"  id="question-demographics__button" class="btn--gray" type="text" value="siguiente">
+				
+			</section>
+			<section class="question-module__demographicssection2" style="display:none;">
+				
+				<label for="bio">Sexo:</label><br>
+					<select name="sexo">
+						<option value="F">Femenino</option>
+						<option value="M">Masculino</option>
+					</select>
+					<label for="bio">¿Cuál es el estrato que figura en los recibos de servicios públicos del lugar donde vive?</label><br>
+					<div class="extracto">
+						<input type="radio" name="extrato" value="1" checked>1<br>
+						<input type="radio" name="extrato" value="2">2<br>
+						<input type="radio" name="extrato" value="3">3<br>
+						<input type="radio" name="extrato" value="4">4<br>
+						<input type="radio" name="extrato" value="5">5<br>
+						<input type="radio" name="extrato" value="6">6<br>
+					</div>
+					<label for="bio">Edad actual</label>
+					<select name="" id="" class="age">						
+					</select>
+					<label for="bio">Seleccione el departamento de nacimiento:</label><br>
+					<select class="departament-birth"></select>
+					<div style="display:none;" class="cities">
+						<label for="bio">Seleccione la ciudad de nacimiento:</label><br>
+						<select class="city-birth"></select>
+					</div><br>
+					<input type="submit" id="question-demographics__button2" class="btn--gray" type="text" value="siguiente">
+				
+			</section>
+			<section class="question-module__demographicssection3" style="display:none;">
+					<div class="statecivil">
+						<label for="bio">¿Cuál es su estado civil?</label>
+					<select name="estado" class="estado">
+							<option value="Soltero" checked>Soltero<br>
+							<option value="Casado">Casado<br>
+							<option value="Viudo">Viudo<br>
+							<option value="Union libre">Union libre<br>
+							<option value="Divorciado">Divorciado<br>
+							<option value="Separado">Separado<br>
+					</select><br>
+					</div>
+					
+					<div class="condicionSocial">
+						<label for="bio">¿ Hace parte de alguna de las siguientes condiciones sociales?</label>
+						<select name="grupoEtnico " id="">
+							<option value="">Perteneciente a un grupo étnico reconocido por la oficina de  minorías étnicas</option>
+							<option value="">Persona en condición de discapacidad</option>
+							<option value="">Víctima de la violencia según la ley 1448 de 2011 *</option>
+							<option value="">Desmovilizado en proceso de reinserción</option>
+							<option value="">Población habitante de  frontera Ley  191 de 1995 **</option>
+						</select>
+					</div>
+					<div class="links">
+						<a href="http://www.alcaldiabogota.gov.co/sisjur/normas/Norma1.jsp?i=43043" target="_blank">*</a>
+						<a href="http://www.creg.gov.co/html/Ncompila/htdocs/Documentos/Energia/docs/ley_0191_1995.htm" target="_blank">**</a>
+					</div>
+					<label for="">Tiene computador?</label>
+					<select name="computer" id="computer">
+						<option value="Si">Si</option>
+						<option value="No">No</option>
+					</select>
+					<br><br>
+					<select name="propietyComputer" id="propietyComputer" >
+						<option value="Familia">De la familia</option>
+						<option value="Propio">Propio</option>
+						<option value="Credito">Propio en crédito</option>
+						<option value="Oficina">De la oficina</option>
+					</select>
+					<input type="submit" id="question-demographics__button3" class="btn--gray" type="text" value="siguiente">
+			</section>
+			<section class="question-module__demographicssection4" style="display:none;">
+				<label for="">¿En qué tipo de vivienda vive?</label>
+				<select name="" id="vivienda">
+					<option value="Casa">Casa</option>
+					<option value="Apartamento">Apartamento</option>
+					<option value="Residencia estudiantil"> Residencia estudiantil</option>
+					<option value="Cuarto casa de familia"> Cuarto en casa de familia</option>
+					<option value="Otra">Otra</option>
+				</select>
+				<div id="whichHouse" style="display:none;">
+					<label for="">Cual ?</label>
+					<textarea name="" id="" rows="3" placeholder="Describa brevemente"></textarea>
+				</div>
+				<label for="">El lugar donde vive es:</label>
+				<select name="" id="">
+					<option value="Propio de familia">Propio de familia</option>
+					<option value="Arrendado"> Arrendado</option>
+					<option value="Propio con crédito"> Propio con crédito</option>
+					<option value="Propio"> Propio</option>
+				</select><br>
+				<label for="">¿Tiene acceso a Internet fuera del servicio que le ofrece la Universidad?</label>
+				<select name="" id="Internet">
+					<option value="">Si</option>
+					<option value="">No</option>
+				</select>
+				<div class="accesInternet" >
+					<label for="">Seleccione cual:</label>
+					<select name="" id="" >
+					<option value="">En su casa</option>
+					<option value="">En casa de Familiares o amigos</option>
+					<option value="">En su trabajo</option>
+					<option value="">Por móvil o módem portátil</option>
+					<option value="">Colgado por red privada</option>
+					<option value=""> Red pública gratis</option>
+				</select>
+				</div>
+				<label for="">¿Vive con?</label>
+				<select name="" id="">
+					<option value="Sus padres">Sus padres</option>
+					<option value="Familiares">Familiares</option>
+					<option value="Amigos o conocidos">Amigos o conocidos</option>
+					<option value="Su propia familia">Su propia familia</option>
+					<option value="Solo">Solo</option>
+				</select>
+				
+			</section>
+		</section>
+		<section class="question-module__2"></section>
+		<section class="question-module__3"></section>
+		<section class="question-module__4"></section>
+	</section>
+	<!-- section forms  -->	
+	<section class="form-question measure p2" id="forms" style="display:none;">
+		<h3>Formulario de contacto</h3>
+			
+		<p class="h4">
+			Si tiene algun comentario o inquietud lo puede depositar en el siguiente formulario
+		</p>
+
+		<form action="#" role="form" class="my2">
+			<label for="name">Nombre</label>
+			<input type="text" name="name" placeholder="Nombre"><br>
+			<label for="email">Email</label>
+			<input type="email" name"email" placeholder="user@example.com"><br>
+			<label for="bio">Descripcion</label>
+			<textarea name="bio" rows="3" placeholder="Describa brevemente su duda o inquietud"></textarea>
+			<input type="submit" value="Enviar" class="btn--yellow"></input>
+		</form>
+	</section>
+	<!-- end section form -->
+	
+
+</body>
+<script type="text/javascript">
+	(function() {
+		var toggle = document.querySelector("#flexy-nav__toggle");
+		var nav = document.querySelector("#flexy-nav__items");
+		toggle.addEventListener("click", function(e) {
+			e.preventDefault();
+			nav.classList.contains("flexy-nav__items--visible") ? nav.classList.remove("flexy-nav__items--visible") : nav.classList.add("flexy-nav__items--visible");
+		});
+	})();
+</script>
+</html>

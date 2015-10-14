@@ -1,0 +1,251 @@
+
+html{
+ background-color:#FFFFFF;  
+}
+body{
+	margin: 0;
+	padding: 0;
+}
+select{
+    width: 100%;
+    padding:3px;
+    margin: 0;
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    border-radius:4px;
+    -webkit-box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
+    -moz-box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
+    box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
+    background: #f8f8f8;
+    color:#888;
+    border:none;
+    outline:none;
+    display: inline-block;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+}
+          /* Targetting Webkit browsers only. FF will show the dropdown arrow with so much padding. */
+      @media screen and (-webkit-min-device-pixel-ratio:0) {
+          select {padding-right:18px}
+      }
+
+      select {position:relative}
+      select:after {
+          content:'<>';
+          font:11px "Consolas", monospace;
+          color:#aaa;
+          -webkit-transform:rotate(90deg);
+          -moz-transform:rotate(90deg);
+          -ms-transform:rotate(90deg);
+          transform:rotate(90deg);
+          right:8px; top:2px;
+          padding:0 0 2px;
+          border-bottom:1px solid #ddd;
+          position:absolute;
+          pointer-events:none;
+      }
+      select:before {
+          content:'';
+          right:6px; top:0px;
+          width:20px; height:20px;
+          background:#f8f8f8;
+          position:absolute;  
+      }
+header{
+  display: flex;
+  background-color: #FFFFFF;
+} 
+
+  .image{
+    width: 30%;
+    height: 30%;
+  }
+
+    .title{
+    margin-left: 5%;
+    font-size:1.5rem;
+  }
+
+input,
+button {
+  font: inherit;
+  border-radius: none;
+  box-shadow: none;
+  appearance: none;
+}
+header{
+	height: 100%;
+	width: 100%;
+
+}
+button {
+  cursor: pointer;
+}
+input{
+    margin-bottom: -1.5rem;
+}
+
+/* nav container */
+
+.flexy-nav {
+  display: flex;
+  flex-direction: column;
+}
+
+/* nav links */
+
+.flexy-nav__items {
+  display: none;
+  flex: 1;
+  flex-direction: column;
+  list-style: none;
+  margin: 0 0 4px 0;
+  padding: 4px;
+  text-align: center;
+}
+
+.flexy-nav__items--visible {
+  display: flex;
+}
+
+.flexy-nav__item {
+  background-color: #000000;
+  border-bottom: solid 1px #F2EAAD;
+}
+
+.flexy-nav__item:last-child {
+  border-bottom: 0;
+}
+
+.flexy-nav__link {
+  padding: 8px;
+  display: block;
+  text-decoration: none;
+  color:white;
+}
+
+/* nav toggle */
+
+.flexy-nav__toggle {
+  margin: 0 0 4px 0;
+  padding: 4px;
+  color: #fff;
+  background-color: #000000;
+  border: none;
+}
+
+.flexy-nav__toggle:hover,
+.flexy-nav__toggle:focus {
+  outline: none;
+}
+
+/* nav form */
+
+.flexy-nav__form {
+  height: 48px;
+}
+
+.flexy-nav__search {
+  display: block;
+  margin: 0;
+  padding: 0 4px;
+  width: 100%;
+  height: 48px;
+  color: #6d6d6d;
+  background-color: #fff;
+  border: solid 2px #e7e7e7;
+}
+
+.flexy-nav__search:focus {
+  outline: none;
+  border: solid 2px #6d6d6d;
+}
+/** question section **/
+
+.question{
+  
+
+
+}
+      .question-item1{
+        background-color: #cacaca;
+        border: 10px solid #FFFFFF;
+        align-self:auto;
+
+      }
+          .question-item__form{
+            padding: 10px;
+          }
+      .question-modules{
+          display: flex;
+          flex-direction:row;
+      }
+          .question-item__module{
+              border-radius: 17px;
+              padding: 15px;
+              margin: 4px;
+              text-align: center;
+          }
+          .question-item__link{
+               text-decoration: none;
+               color: #000000;
+          }
+          .question-item__image{
+                  width: 56px;
+          }
+          .extracto{
+                display:flex;
+          } 
+
+
+
+
+
+@media all and (min-width: 768px) {
+
+
+    
+  .flexy-nav {
+    flex-direction: row;
+  }
+
+  .flexy-nav__items {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    height: 48px;
+  }
+
+  .flexy-nav__item {
+    flex: 1;
+    margin-right: 4px;
+    border-bottom: none;
+  }
+
+  .flexy-nav__link {
+    padding: 0;
+    line-height: 48px;
+  }
+
+  .flexy-nav__toggle {
+    display: none;
+  }
+
+  .flexy-nav__form {
+    flex: none;
+  }
+
+  .flexy-nav__search {
+    width: 240px;
+    transition: width 0.3s;
+  }
+
+  .flexy-nav__search:focus {
+    width: 360px;
+  }
+  .question{
+    width: 100%;
+  }
+}
