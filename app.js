@@ -27,7 +27,7 @@ app.get('/', function(req, res) {
 
 routes = require('./routes/tvshows')(app);
 
-mongoose.connect('mongodb://localhost/tvshows', function(err, res) {
+mongoose.connect('mongodb://uptc:uptc@ds043002.mongolab.com:43002/uptc-', function(err, res) {
 	if(err) {
 		console.log('ERROR: connecting to Database. ' + err);
 	} else {
@@ -35,6 +35,6 @@ mongoose.connect('mongodb://localhost/tvshows', function(err, res) {
 	}
 });
 
-server.listen(3000, function() {
+server.listen(process.env.PORT || 3000, function() {
   console.log("Node server running on http://localhost:3000");
 });
