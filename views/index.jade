@@ -1,0 +1,225 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title Estadisticas
+    link(rel='stylesheet', type='text/css', href='furtive/css/furtive.css')
+    link(rel='stylesheet', type='text/css', href='css/style.css')
+    // <link rel="stylesheet" type="text/css" href="flexboxgrid/css/index.css">
+    link(rel='stylesheet', href='foundation-icons/foundation-icons.css')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    script(type='text/javascript', src='js/jquery-2.1.4.js')
+    script(type='text/javascript', src='js/main.js')
+  header
+    img.image(src='img/Bienestar.png')
+    h2.title Ficha Socio demográfica del Estudiante  
+  body
+    nav.flexy-nav
+      button#flexy-nav__toggle.flexy-nav__toggle.fi-list  Menu
+      ul#flexy-nav__items.flexy-nav__items
+        li.flexy-nav__item
+          a.flexy-nav__link.one-link(href='#') Inicio
+        li.flexy-nav__item
+          a.flexy-nav__link.two-link(href='#') Preguntas
+        li.flexy-nav__item
+          a.flexy-nav__link.three-link(href='#') Contacto
+    // section information
+    article.reading.measure.p2
+      article
+        p
+          | La Unidad de Política Social de la Universidad se encuentra realizando un estudio orientado a conocer los aspectos que inciden en la deserción universitaria, a fin de diseñar estrategias de intervención dirigidas a disminuir dichos riesgos y a favorecer mayores procesos de adaptación a la población universitaria. Para ello, ha diseñado la siguiente encuesta que  busca conocer información sobre usted y su familia y sobre temas relacionados con su vida académica y relacional.
+        p
+          | La encuesta es totalmente ANÓNIMA; es decir, no se le pide proporcionar ningún dato de identificación. La información que usted registre no tendrá ninguna consecuencia en su desempeño académico ni en su vida personal; por tal razón, le solicitamos responder de forma abierta y sincera, de tal manera que podamos tener una información ajustada a la realidad y a las experiencias vividas por las personas que respondan la encuesta.
+        p
+          | Diligencie todas las preguntas del instrumento. El sistema lo guiará indicándole cuando alguna pregunta ha quedado en blanco. Al finalizar el ejercicio, le solicitamos dar click en el botón ENVIAR.
+        p
+          | He entendido la información que se expone en este consentimiento y me han respondido las dudas e inquietudes surgidas. Autorización Estoy de acuerdo o acepto participar en el presente estudio.
+    // end section information
+    // section question
+    section.question(style='display:none;')
+      ul.question-modules.list--unstyled
+        li.bg--orange.question-item__module
+          h6 MODULO 1. DATOS DEMOGRÀFICOS
+          a.question-item__link.date_demografics(href='#')
+            img.question-item__image(src='img/flat/pencil.png')
+        li.bg--orange.question-item__module
+          h6 MODULO 2. DATOS SOCIOECONÒMICOS
+          a.question-item__link(href='#')
+            img.question-item__image(style='display:none;', src='img/flat/pencil.png')
+        li
+        li
+        li
+    // end-section question module
+    section.question-module
+      section.question-module__demographics.measure.p2(style='display:none;')
+        h3 MODULO 1. DATOS DEMOGRÀFICOS
+        section.question-module__demographicssection1(style='display:none;')
+          label(for='bio') Seleccione el departamento de residencia:
+          br
+          select.departament
+          .cities(style='display:none;')
+            label(for='bio') Seleccione la ciudad de residencia:
+            br
+            select.city
+          br
+          label(for='bio') Seccional donde estudia:
+          br
+          select#headquarters(name='')
+          br
+          .career(style='display:none;')
+            label(for='bio') Carrera que estudia:
+            br
+            select#career-list(name='')
+          br
+          input#question-demographics__button.btn--gray(type='submit', value='siguiente')
+        section.question-module__demographicssection2(style='display:none;')
+          label(for='bio') Sexo:
+          br
+          select(name='sexo')
+            option(value='F') Femenino
+            option(value='M') Masculino
+          label(for='bio')
+            | ¿Cuál es el estrato que figura en los recibos de servicios públicos del lugar donde vive?
+          br
+          .extracto
+            input(type='radio', name='extrato', value='1', checked='')
+            | 1
+            br
+            input(type='radio', name='extrato', value='2')
+            | 2
+            br
+            input(type='radio', name='extrato', value='3')
+            | 3
+            br
+            input(type='radio', name='extrato', value='4')
+            | 4
+            br
+            input(type='radio', name='extrato', value='5')
+            | 5
+            br
+            input(type='radio', name='extrato', value='6')
+            | 6
+            br
+          label(for='bio') Edad actual
+          select.age(name='', id='')
+          label(for='bio') Seleccione el departamento de nacimiento:
+          br
+          select.departament-birth
+          .cities(style='display:none;')
+            label(for='bio') Seleccione la ciudad de nacimiento:
+            br
+            select.city-birth
+          br
+          input#question-demographics__button2.btn--gray(type='submit', value='siguiente')
+        section.question-module__demographicssection3(style='display:none;')
+          .statecivil
+            label(for='bio') ¿Cuál es su estado civil?
+            select.estado(name='estado')
+              option(value='Soltero', checked='')
+                | Soltero
+                br
+              option(value='Casado')
+                | Casado
+                br
+              option(value='Viudo')
+                | Viudo
+                br
+              option(value='Union libre')
+                | Union libre
+                br
+              option(value='Divorciado')
+                | Divorciado
+                br
+              option(value='Separado')
+                | Separado
+                br
+            br
+          .condicionSocial
+            label(for='bio') ¿ Hace parte de alguna de las siguientes condiciones sociales?
+            select(name='grupoEtnico ', id='')
+              option(value='') Perteneciente a un grupo étnico reconocido por la oficina de  minorías étnicas
+              option(value='') Persona en condición de discapacidad
+              option(value='') Víctima de la violencia según la ley 1448 de 2011 *
+              option(value='') Desmovilizado en proceso de reinserción
+              option(value='') Población habitante de  frontera Ley  191 de 1995 **
+          .links
+            a(href='http://www.alcaldiabogota.gov.co/sisjur/normas/Norma1.jsp?i=43043', target='_blank') *
+            a(href='http://www.creg.gov.co/html/Ncompila/htdocs/Documentos/Energia/docs/ley_0191_1995.htm', target='_blank') **
+          label(for='') Tiene computador?
+          select#computer(name='computer')
+            option(value='Si') Si
+            option(value='No') No
+          br
+          br
+          select#propietyComputer(name='propietyComputer')
+            option(value='Familia') De la familia
+            option(value='Propio') Propio
+            option(value='Credito') Propio en crédito
+            option(value='Oficina') De la oficina
+          input#question-demographics__button3.btn--gray(type='submit', value='siguiente')
+        section.question-module__demographicssection4(style='display:none;')
+          label(for='') ¿En qué tipo de vivienda vive?
+          select#vivienda(name='')
+            option(value='Casa') Casa
+            option(value='Apartamento') Apartamento
+            option(value='Residencia estudiantil')  Residencia estudiantil
+            option(value='Cuarto casa de familia')  Cuarto en casa de familia
+            option(value='Otra') Otra
+          #whichHouse(style='display:none;')
+            label(for='') Cual ?
+            textarea(name='', id='', rows='3', placeholder='Describa brevemente')
+          label(for='') El lugar donde vive es:
+          select(name='', id='')
+            option(value='Propio de familia') Propio de familia
+            option(value='Arrendado')  Arrendado
+            option(value='Propio con crédito')  Propio con crédito
+            option(value='Propio')  Propio
+          br
+          label(for='') ¿Tiene acceso a Internet fuera del servicio que le ofrece la Universidad?
+          select#Internet(name='')
+            option(value='') Si
+            option(value='') No
+          .accesInternet
+            label(for='') Seleccione cual:
+            select(name='', id='')
+              option(value='') En su casa
+              option(value='') En casa de Familiares o amigos
+              option(value='') En su trabajo
+              option(value='') Por móvil o módem portátil
+              option(value='') Colgado por red privada
+              option(value='')  Red pública gratis
+          label(for='') ¿Vive con?
+          select(name='', id='')
+            option(value='Sus padres') Sus padres
+            option(value='Familiares') Familiares
+            option(value='Amigos o conocidos') Amigos o conocidos
+            option(value='Su propia familia') Su propia familia
+            option(value='Solo') Solo
+      section.question-module__2
+      section.question-module__3
+      section.question-module__4
+    // section forms
+    section#forms.form-question.measure.p2(style='display:none;')
+      h3 Formulario de contacto
+      p.h4
+        | Si tiene algun comentario o inquietud lo puede depositar en el siguiente formulario
+      form.my2(action='#', role='form')
+        label(for='name') Nombre
+        input(type='text', name='name', placeholder='Nombre')
+        br
+        label(for='email') Email
+        input(type='email', placeholder='user@example.com')
+        br
+        label(for='bio') Descripcion
+        textarea(name='bio', rows='3', placeholder='Describa brevemente su duda o inquietud')
+        input.btn--yellow(type='submit', value='Enviar')
+    // end section form
+  script(type='text/javascript').
+    (function() {
+    var toggle = document.querySelector("#flexy-nav__toggle");
+    var nav = document.querySelector("#flexy-nav__items");
+    toggle.addEventListener("click", function(e) {
+    e.preventDefault();
+    nav.classList.contains("flexy-nav__items--visible") ? nav.classList.remove("flexy-nav__items--visible") : nav.classList.add("flexy-nav__items--visible");
+    });
+    })();
